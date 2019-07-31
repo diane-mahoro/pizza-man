@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+    color: green;
+    font-style: oblique;
+    font-family: monospace;
+    margin-bottom: 30px;
+    margin-top: 70px;
+
+}
+img{
+    transform: scale(1.05);
+    
+}
+p{
+}
+img:hover{
+transform: scale(1.1);
+filter: brightness(0.5);
+}
