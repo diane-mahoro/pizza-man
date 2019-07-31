@@ -45,3 +45,17 @@ p{
     font-size: 20px;
     line-height: 2em;
 }
+div img{
+margin-left: 10px;
+}
+.footer{
+    background-color: lightgray;
+    height: 200px;
+    margin-top: 10px;
+}
+#foo{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 450px;
+}
