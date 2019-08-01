@@ -10,7 +10,9 @@
 </head>
 <body>
    <div class="container-fluid">
-       <div class="header"></div>
+       <div class="header">
+            <button id="back"><a href="index.html">Back</a></button>
+       </div>
        <div class="col-md-12">
            <h1>FILL IN YOUR PIZZA ORDER HERE</h1>
            <form id="form">
@@ -20,19 +22,40 @@
               <option value="2">Medium</option>
               <option value="3">Small</option>
           </select>
-           <label for="top">Toppings</label>
-           <select id="top">
-               <option value="one">Pepperoni</option>
-               <option value="two">Mushrooms</option>
-               <option value="three">Onions</option>
-               <option value="four">Sausage</option>
-               <option value="five">Bacon</option>
-               <option value="six">Extra chessee</option>
-               <option value="seven">Black olives</option>
-               <option value="eight">Green peppers</option>
-               <option value="nine">Pineapple</option>
-               <option value="ten">Spinach</option>
-           </select>
+           <label for="flavour">Flavour</label>
+           <select id="flaour">
+                <option value="one1">Berry, Arugula and Prosciutto Pizza</option>
+                <option value="two1">Macaroni And Cheese Pizza</option>
+                <option value="three1">Butternut Squash and Crispy Sage Pizza</option>
+                <option value="four1">Buffalo Chicken Pizza Sticks</option>
+                <option value="five1">Brown Butter Lobster and Spinach Pizza with Bacon + Fontina</option>
+                <option value="six1">Hummus And Grilled Zucchini Pizzas</option>
+                <option value="seven1">Chicken Alfredo Pizza</option>
+                <option value="eight1">Taco Quesadila Pizza</option>
+                <option value="nine1">Wrede's Grilled Pizza with Grapes and Soppressata</option>
+                <option value="ten1">Cookie Dough Dessert Pizza</option>
+            </select>
+            <label for="crust">Crust</label>
+            <select id="cruts">
+                    <option value="one2">Thin</option>
+                    <option value="two2">Thick</option>
+                    <option value="three2">Flatbread</option>
+                    <option value="four2">Focaccia</option>
+                    <option value="five2">Custom</option>
+            </select>
+            <label for="top">Toppings</label> <br>
+            <input type="radio" value="Pepperoni" id="one">Pepperoni <br>
+            <input type="radio" value="" id="two">Mushrooms <br>
+            <input type="radio" value="" id="three">Onions <br>
+            <input type="radio" value="" id="four">Sausage <br>
+            <input type="radio" value="" id="five">Bacon <br>
+            <input type="radio" value="" id="six">Extra cheese <br>
+            <input type="radio" value="" id="seven"> Black olives <br>
+            <input type="radio" value="" id="eight">Green peppers <br>
+            <input type="radio" value="" id="nine">Pineapple <br>
+            <input type="radio" value="" id="ten">Spinach <br>
+            <button>ANOTHER PIZZA</button>
+            <input type="submit" value="order" id="submit">
            </form>
        </div>
    </div> 
