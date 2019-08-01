@@ -18,6 +18,7 @@ select{
 input{
     position: relative;
     top: 6px;
+    width: 90%;
 }
 label{
     position: relative;
