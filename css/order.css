@@ -5,6 +5,11 @@
     height: 700px;
     background-size: cover;
 }
+h3{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
 select{
     width: 90%;
     position: relative;
@@ -24,11 +29,16 @@ label{
 form{
     margin-top: 10px;
     margin-left: 5px;
+    width: 70%;
+    border: 1px solid grey;
+    border-radius: 5%;
+    padding: 25px;
+    margin: 15px;
 }
 button{
     padding: 5px;
     margin: 5px;
-    background-color: black;
+    background-color: green;
     border: none;
     width: 10%;
     border-radius: 10%;
@@ -37,14 +47,14 @@ button{
     left: 10px;
 }
 button:hover{
-    background-color: green;
+    background-color:black;
 }
 button a{
     text-decoration: none;
     font-size: 20px;
-    color: white;
+    color: black;
 }
 button a:hover{
-    color: black;
+    color: white;
     text-decoration: none;
 }
