@@ -5,3 +5,19 @@
     height: 700px;
     background-size: cover;
 }
+select{
+    width: 90%;
+    position: relative;
+    top: 6px;
+}
+label{
+    position: relative;
+    top: 6px;
+    float: left; 
+    font-size: 25px;
+    width: 100%;
+}
+form{
+    margin-top: 10px;
+    margin-left: 5px;
+}
