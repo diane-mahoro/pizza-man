@@ -62,11 +62,6 @@ button a:hover{
     color: white;
     text-decoration: none;
 }
-.col-md-4{
-    position: relative;
-    top: 30px;
-    right: 100px;
-}
 table{
     margin: 10px;
     border: 1px solid black;

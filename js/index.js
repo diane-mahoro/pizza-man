@@ -67,8 +67,8 @@ $("form#form").submit(function(event){
         alert("PLEASE PLACE THE ORDER");
     }
     P = sP + tP + fP + cP;
-    return alert(p);
-    // $("span#price").text(calcPrice());
+    alert(p);
+    $("span#price").text();
     $("#size").val("");
     $("#flavour").val("");
     $("#crust").val("");
