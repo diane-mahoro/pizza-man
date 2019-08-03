@@ -6,7 +6,9 @@
     background-size: cover;
 }
 h3{
-    text-align: center;
+    color: green;
+    position: relative;
+    top: 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
@@ -58,4 +60,22 @@ button a{
 button a:hover{
     color: white;
     text-decoration: none;
+}
+.col-md-4{
+    position: relative;
+    top: 30px;
+    right: 100px;
+}
+table{
+    margin: 10px;
+    border: 1px solid black;
+    border-collapse: separate;
+    border-spacing: 30px;
+}
+td{
+    padding: 10px;
+}
+th{
+    text-align: center;
+    font-style: italic;
 }

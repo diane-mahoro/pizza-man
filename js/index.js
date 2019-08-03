@@ -13,14 +13,17 @@ $("form#form").submit(function(event){
     var c =$("#crust").val();
     var t =$("#top").val();
     var newPizza = new Pizza(s,f,c,t);
-    if(newPizza.s=="large" && newPizza.f =="Berry, Arugula and Prosciutto Pizza" && newPizza.c =="Thin" && newPizza.t.length =="Berry, Arugula and Prosciutto Pizza"){
+    if(s=='large' && f =='Berry, Arugula and Prosciutto Pizza' && c =='Thin' && t =='Sausage and pineapple'){
         p = 11000;
     }
-    else if(newPizza.s=="medium" && newPizza.f =="Berry, Arugula and Prosciutto Pizza" && newPizza.c =="Thin" && newPizza.t.length =="Berry, Arugula and Prosciutto Pizza"){
+    else if(s=="medium" && f =="Berry, Arugula and Prosciutto Pizza" && c =="Thin" && t =="Berry, Arugula and Prosciutto Pizza"){
         p= 8000;
     }
     else{p=6000;}
-    return alert(p);
+    $("#first").text(newPizza.size);
+    $("#second").text(newPizza.flavour);
+    // return alert(p);
+
     $("#size").val("");
     $("#flavour").val("");
     $("#crust").val("");
