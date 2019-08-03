@@ -5,6 +5,27 @@ var Pizza = function(size,topping,crust,flavour){
     this.crust = crust;
     this.flavour = flavour;
 }
+$("button#another").click(function(event){
+    event.preventDefault();
+$("form#form").append(
+    '<label for="size">Size</label><br>' +
+    ' <input type="text" id="first">' +
+    '<label for="flavour">Flavour</label>' +
+    '<input type="text"id="second">' +
+   '<label for="crust">Crust</label>' +
+   '<input type="text" id="third">' +
+   '<label for="top">Toppings</label> <br>' +
+   '<input type="text" id="fourth">'
+);
+$("div.col-md-4").append(
+   '<h4>ANOTHER PIZZA ORDER DETAIL:</h4>' +
+              '<P>Size: <span id="first"></span></P>' +
+              '<P>Flavour: <span id="second"></span></P>' +
+              '<P>Crust: <span id="third"></span></P>' +
+             '<P>Toppings: <span id="fourth"></span></P>' +
+              '<p>Total price: <span id="price"></span></p>'
+);
+});
 $("form#form").submit(function(event){
     event.preventDefault();
     var p=0;
