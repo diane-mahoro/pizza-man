@@ -29,46 +29,78 @@ $("div.col-md-4").append(
 $("form#form").submit(function(event){
     event.preventDefault();
     var p=0;
-    var s = $("#first").val();
-    var f =$("#second").val();
-    var c =$("#third").val();
-    var t =$("#fourth").val();
+    var s = $("#first").val().toLowerCase();
+    var f =$("#second").val().toLowerCase();
+    var c =$("#third").val().toLowerCase();
+    var t =$("#fourth").val().toLowerCase();
     var newPizza = new Pizza(s,f,c,t);
     $("span#first2").text(newPizza.size);
     $("span#second2").text(newPizza.flavour);
     $("span#third2").text(newPizza.crust);
     $("span#fourth2").text(newPizza.topping);
         var sP, cP, fP, tP;
-        if(s == 'large' && t == 'Buffalo chicken and blue cheese' && f== 'Brown Butter Lobster and Spinach Pizza with Bacon + Fontina' && c == 'flatbread')
-        sP = 4000;
-        tP = 5000;
-        fP = 3000;
-        cP = 3000;
-    }
-    else if(S == 'medium' && c == 'thick' && f == 'Buffalo Chicken Pizza Sticks' && t =='Gorgonzola, artichoke hearts, prosciutto, red onion, and tomato'){
-        sP= 2000;
-        cP= 2000;
-        tP =4000;
-        fP = 4000;
-    }
-    else if(S == 'small' && c == 'thin' && f == 'Butternut Squash and Crispy Sage Pizza' && t =='Sausage and pineapple' && t=='Figs, prosciutto, and caramelized onions'){
-       sP = 1000;
-       cP = 500;
-       fP = 1000;
-       tP =1000;
-    }
-    else if(c == 'custom' && c == 'focaccia' && f == 'Macaroni And Cheese Pizza' && f=='Butternut Squash and Crispy Sage Pizza' t=='Roasted Brussels sprouts and bacon or pancetta'){
-       cP = 5000;
-       fP = 2500;
-       tP = 1500;
-
-    }
-    else{
-        alert("PLEASE PLACE THE ORDER");
-    }
-    P = sP + tP + fP + cP;
-    alert(p);
-    $("span#price").text();
+        var siz =['large', 'medium', 'small'];
+        var cru =['thin', 'thick', 'focaccia', 'custom', 'flatbread'];
+        var top =['Buffalo chicken and blue cheese','Gorgonzola, artichoke hearts, prosciutto, red onion, and tomato','Sausage and pineapple','Figs, prosciutto, and caramelized onions','Roasted Brussels sprouts and bacon or pancetta'];
+        var fla = ['Brown Butter Lobster and Spinach Pizza with Bacon + Fontina','Butternut Squash and Crispy Sage Pizza','Butternut Squash and Crispy Sage Pizza','Macaroni And Cheese Pizza','Butternut Squash and Crispy Sage Pizza'];
+        var calcPrice = function(s,t,c,f){}
+        if(s === siz[0]){
+            sP = 4000;
+            if(t === top[0]){
+                tP = 5000;
+                if(c === cru[0]){
+                    tP = 8000
+                    if(f === fla[0]){
+                        fP = 8000;
+                    }
+                    else if(f === fla[1]){
+                        fP = 6000;
+                    }
+                    else if(f === fla[2]){
+                        fP = 4000;
+                    }
+                    else if(f === fla[3]){
+                        fP = 2000;
+                    }
+                    else if(f === fla[4]){
+                        fP = 1000;
+                    }
+                    else if(c === cru[1]){
+                        tP = 6000
+                    }
+                    else if(c === cru[2]){
+                        tP = 4000
+                    }
+                    else if(c === cru[3]){
+                        tP = 2000
+                    }
+                    else if(c === cru[4]){
+                        tP = 1000
+                    }
+               }
+               else if(t === top[1]){
+                tP = 4000;``
+            }
+            else if(t === top[2]){
+                tP = 3000;
+            }
+            else if(t === top[3]){
+                tP = 2000;
+            }
+            else if(t === top[4]){
+                tP = 1000;
+            }
+        }
+        else if(s === siz[1]){
+            sP = 2000;
+        }
+        else if(s === siz[1]){
+            sP = 1000;
+        }
+     var totalPrice = sP + cP + tP + f;
+     return totalPrice;
+    };
+    $("span#price").text(calcPrice(s,p,c,f));
     $("#size").val("");
     $("#flavour").val("");
     $("#crust").val("");
