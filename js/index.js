@@ -29,36 +29,35 @@ $("div.col-md-4").append(
 $("form#form").submit(function(event){
     event.preventDefault();
     var p=0;
-    var s = $("#first").val().toLowerCase();
-    var f =$("#second").val().toLowerCase();
-    var c =$("#third").val().toLowerCase();
-    var t =$("#fourth").val().toLowerCase();
+    var s = $("#first").val();
+    var f =$("#second").val();
+    var c =$("#third").val();
+    var t =$("#fourth").val();
     var newPizza = new Pizza(s,f,c,t);
     $("span#first2").text(newPizza.size);
     $("span#second2").text(newPizza.flavour);
     $("span#third2").text(newPizza.crust);
     $("span#fourth2").text(newPizza.topping);
-    var sP, cP, fP, tP;
-    function calcPrice(){
-        if(s == 'large' || t == 'Buffalo chicken and blue cheese' || f== 'Brown Butter Lobster and Spinach Pizza with Bacon + Fontina' || c == 'flatbread')
+        var sP, cP, fP, tP;
+        if(s == 'large' && t == 'Buffalo chicken and blue cheese' && f== 'Brown Butter Lobster and Spinach Pizza with Bacon + Fontina' && c == 'flatbread')
         sP = 4000;
         tP = 5000;
         fP = 3000;
         cP = 3000;
     }
-    else if(S == 'medium' || c == 'thick' || f == 'Buffalo Chicken Pizza Sticks' || t =='Gorgonzola, artichoke hearts, prosciutto, red onion, and tomato'){
+    else if(S == 'medium' && c == 'thick' && f == 'Buffalo Chicken Pizza Sticks' && t =='Gorgonzola, artichoke hearts, prosciutto, red onion, and tomato'){
         sP= 2000;
         cP= 2000;
         tP =4000;
         fP = 4000;
     }
-    else if(S == 'small' || c == 'thin' || f == 'Butternut Squash and Crispy Sage Pizza' || t =='Sausage and pineapple' || t=='Figs, prosciutto, and caramelized onions'){
+    else if(S == 'small' && c == 'thin' && f == 'Butternut Squash and Crispy Sage Pizza' && t =='Sausage and pineapple' && t=='Figs, prosciutto, and caramelized onions'){
        sP = 1000;
        cP = 500;
        fP = 1000;
        tP =1000;
     }
-    else if(c == 'custom' || c == 'focaccia' || f == 'Macaroni And Cheese Pizza' || f=='Butternut Squash and Crispy Sage Pizza' t=='Roasted Brussels sprouts and bacon or pancetta'){
+    else if(c == 'custom' && c == 'focaccia' && f == 'Macaroni And Cheese Pizza' && f=='Butternut Squash and Crispy Sage Pizza' t=='Roasted Brussels sprouts and bacon or pancetta'){
        cP = 5000;
        fP = 2500;
        tP = 1500;
@@ -69,9 +68,7 @@ $("form#form").submit(function(event){
     }
     P = sP + tP + fP + cP;
     return alert(p);
-};
-    $("span#price").text(p);
-     
+    // $("span#price").text(calcPrice());
     $("#size").val("");
     $("#flavour").val("");
     $("#crust").val("");
