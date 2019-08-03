@@ -7,32 +7,36 @@ var Pizza = function(size,topping,crust,flavour){
 }
 $("button#another").click(function(event){
     event.preventDefault();
-$("form#form").append(
+$("#jessy").append(
     '<label for="size">Size</label><br>' +
-    ' <input type="text" id="first">' +
+    ' <input type="text" id="first1">' +
     '<label for="flavour">Flavour</label>' +
-    '<input type="text"id="second">' +
+    '<input type="text"id="second1">' +
    '<label for="crust">Crust</label>' +
-   '<input type="text" id="third">' +
+   '<input type="text" id="third1">' +
    '<label for="top">Toppings</label> <br>' +
-   '<input type="text" id="fourth">'
+   '<input type="text" id="fourth1">'
 );
 $("div.col-md-4").append(
    '<h4>ANOTHER PIZZA ORDER DETAIL:</h4>' +
-              '<P>Size: <span id="first"></span></P>' +
-              '<P>Flavour: <span id="second"></span></P>' +
-              '<P>Crust: <span id="third"></span></P>' +
-             '<P>Toppings: <span id="fourth"></span></P>' +
-              '<p>Total price: <span id="price"></span></p>'
+              '<P>Size: <span id="A"></span></P>' +
+              '<P>Flavour: <span id="B"></span></P>' +
+              '<P>Crust: <span id="C"></span></P>' +
+             '<P>Toppings: <span id="D"></span></P>' +
+              '<p>Total price: <span id="price1"></span></p>'
 );
 });
 $("form#form").submit(function(event){
     event.preventDefault();
     var p=0;
-    var s = $("#size").val();
-    var f =$("#flavour").val();
-    var c =$("#crust").val();
-    var t =$("#top").val();
+    var s = $("#first").val();
+    alert(s);
+    var f =$("#second").val();
+    alert(f);
+    var c =$("#third").val();
+    alert(c);
+    var t =$("#fourth").val();
+    alert(c);
     var newPizza = new Pizza(s,f,c,t);
     if(s=='large' && f =='Berry, Arugula and Prosciutto Pizza' && c =='Thin' && t =='Sausage and pineapple'){
         p = 11000;
@@ -41,8 +45,9 @@ $("form#form").submit(function(event){
         p= 8000;
     }
     else{p=6000;}
-    $("#first").text(newPizza.size);
-    $("#second").text(newPizza.flavour);
+    $("span#first1").text(newPizza.size);
+    $("span#second1").text(newPizza.flavour);
+
     // return alert(p);
 
     $("#size").val("");
