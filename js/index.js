@@ -30,13 +30,9 @@ $("form#form").submit(function(event){
     event.preventDefault();
     var p=0;
     var s = $("#first").val();
-    alert(s);
     var f =$("#second").val();
-    alert(f);
     var c =$("#third").val();
-    alert(c);
     var t =$("#fourth").val();
-    alert(c);
     var newPizza = new Pizza(s,f,c,t);
     if(s=='large' && f =='Berry, Arugula and Prosciutto Pizza' && c =='Thin' && t =='Sausage and pineapple'){
         p = 11000;
@@ -45,8 +41,8 @@ $("form#form").submit(function(event){
         p= 8000;
     }
     else{p=6000;}
-    $("span#first1").text(newPizza.size);
-    $("span#second1").text(newPizza.flavour);
+    $("span#first1").text(s);
+    $("span#second1").text(f);
 
     // return alert(p);
 
