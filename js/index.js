@@ -55,4 +55,11 @@ $("form#form").submit(function(event){
             $("span#price").text(p + 'frw');
         }
 });
+$("button#yes").click(function(){
+    prompt("enter your address");
+    alert("YOUR PIZZA WILL BE DELIVERD SOON");
+});
+$("button#no").click(function(){
+    alert("thank you for choosing our service!");
+});
 });
