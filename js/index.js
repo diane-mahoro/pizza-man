@@ -38,72 +38,21 @@ $("form#form").submit(function(event){
     $("span#second2").text(newPizza.flavour);
     $("span#third2").text(newPizza.crust);
     $("span#fourth2").text(newPizza.topping);
-        var sP, cP, fP, tP;
-        var siz =['large', 'medium', 'small'];
-        var cru =['thin', 'thick', 'focaccia', 'custom', 'flatbread'];
-        var top =['Buffalo chicken and blue cheese','Gorgonzola, artichoke hearts, prosciutto, red onion, and tomato','Sausage and pineapple','Figs, prosciutto, and caramelized onions','Roasted Brussels sprouts and bacon or pancetta'];
-        var fla = ['Brown Butter Lobster and Spinach Pizza with Bacon + Fontina','Butternut Squash and Crispy Sage Pizza','Butternut Squash and Crispy Sage Pizza','Macaroni And Cheese Pizza','Butternut Squash and Crispy Sage Pizza'];
-        var calcPrice = function(s,t,c,f){}
-        if(s === siz[0]){
-            sP = 4000;
-            if(t === top[0]){
-                tP = 5000;
-                if(c === cru[0]){
-                    tP = 8000
-                    if(f === fla[0]){
-                        fP = 8000;
-                    }
-                    else if(f === fla[1]){
-                        fP = 6000;
-                    }
-                    else if(f === fla[2]){
-                        fP = 4000;
-                    }
-                    else if(f === fla[3]){
-                        fP = 2000;
-                    }
-                    else if(f === fla[4]){
-                        fP = 1000;
-                    }
-                    else if(c === cru[1]){
-                        tP = 6000
-                    }
-                    else if(c === cru[2]){
-                        tP = 4000
-                    }
-                    else if(c === cru[3]){
-                        tP = 2000
-                    }
-                    else if(c === cru[4]){
-                        tP = 1000
-                    }
-               }
-               else if(t === top[1]){
-                tP = 4000;``
-            }
-            else if(t === top[2]){
-                tP = 3000;
-            }
-            else if(t === top[3]){
-                tP = 2000;
-            }
-            else if(t === top[4]){
-                tP = 1000;
-            }
-        }
-        else if(s === siz[1]){
-            sP = 2000;
-        }
-        else if(s === siz[1]){
-            sP = 1000;
-        }
-     var totalPrice = sP + cP + tP + f;
-     return totalPrice;
-    };
-    $("span#price").text(calcPrice(s,p,c,f));
     $("#size").val("");
     $("#flavour").val("");
     $("#crust").val("");
     $("#top").val("");
+        if( newPizza.size == 'large'){
+            p = 15000;
+            $("span#price").text(p + 'frw');
+        }
+        else if( newPizza.size == 'medium'){
+            p = 10000;
+            $("span#price").text(p + 'frw');
+        }
+        else if( newPizza.size == 'small'){
+            p = 8000;
+            $("span#price").text(p + 'frw');
+        }
 });
 });
