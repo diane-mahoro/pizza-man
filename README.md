@@ -13,11 +13,11 @@ A customer can choose the crust, topping, size and flavour the pizza they want a
 
 -Google chrome browse
 
-- Git and Github
+-Git and Github
 
 ## Active link
 
-[[Pizza-man-resto](https://diane-mahoro.github.io/pizza-man/))
+([Pizza-man-resto](https://diane-mahoro.github.io/pizza-man/))
 
 #### licenced under the terms of Mahoro Diane
 
