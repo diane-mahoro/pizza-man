@@ -13,92 +13,50 @@
        <div class="header">
             <button id="back"><a href="index.html">Back</a></button>
        </div>
-       <div class="col-md-12">
-           <h3 style="color:green; font-style: italic; text-align:center; position:relative; top: 10px;">OUR PIZZA MENU</h3>
-           <hr style="width:20%; text-align:center;">
-       <table>
-           <tr>
-               <th>Size</th>
-               <th>Crust</th>
-               <th>Flavour</th>
-               <th>Toppings</th>
-           </tr>
-           <tr>
-               <td>Large</td>
-               <td>Thin</td>
-               <td>Brown Butter Lobster and Spinach Pizza with Bacon + Fontina</td>
-               <td>Gorgonzola, artichoke hearts, prosciutto, red onion, and tomato</td>
-           </tr>
-           <tr>
-                <td>Medium</td>
-                <td>Thick</td>
-                <td>Buffalo Chicken Pizza Sticks</td>
-                <td>Buffalo chicken and blue cheese</td>
-            </tr>
-            <tr>
-                    <td>Small</td>
-                    <td>Custom</td>
-                    <td>Butternut Squash and Crispy Sage Pizza</td>
-                    <td>Roasted Brussels sprouts and bacon or pancetta</td>
-                </tr>
-                <tr>
-                        <td>---</td>
-                        <td>Focaccia</td>
-                        <td>Macaroni And Cheese Pizza</td>
-                        <td>Figs, prosciutto, and caramelized onions</td>
-                    </tr>
-                    <tr>
-                            <td>---</td>
-                            <td>Flatbread</td>
-                            <td>Berry, Arugula and Prosciutto Pizza</td>
-                            <td>Sausage and pineapple</td>
-                        </tr>
-       </table>
-       </div>
 
            <div class="row" style="position:relative; top:20px;">
                <div class="col-md-8">
                     <h3>FILL IN YOUR PIZZA ORDER HERE</h3>
            <form id="form">
+               <label for="name">First Name</label><br>
+               <input type="text" id="fname">
+               <label for="name">Last Name</label><br>
+               <input type="text" id="sname">
                <div id="jessy">
            <label for="size">Size</label><br>
-          <!-- <select id="select1">
-                <option value="zero"></option>
-              <option value="1">Large</option>
-              <option value="2">Medium</option>
-              <option value="3">Small</option>
-          </select> -->
-          <input type="text" id="first">
+          <select class="select1">
+                <option value="none">none</option>
+              <option value="Large">Large</option>
+              <option value="Medium">Medium</option>
+              <option value="Small">Small</option>
+          </select>
            <label for="flavour">Flavour</label><br>
-            <!-- <select id="select2"> -->
-                <!-- <option value="zero"></option>
-              <option value="1">Brown Butter Lobster and Spinach Pizza with Bacon + Fontina</option>
-              <option value="2">MBuffalo Chicken Pizza Sticks</option>
-              <option value="3">Butternut Squash and Crispy Sage Pizza</option>
-              <option value="4">Macaroni And Cheese Pizza</option>
-              <option value="5">Berry, Arugula and Prosciutto Pizza</option>
-          </select> -->
-            <input type="text"id="second">
+            <select id="select2">
+                <option value="none">none</option>
+              <option value="Brown Butter Lobster and Spinach Pizza with Bacon + Fontina">Brown Butter Lobster and Spinach Pizza with Bacon + Fontina</option>
+              <option value="MBuffalo Chicken Pizza Sticks">MBuffalo Chicken Pizza Sticks</option>
+              <option value="Butternut Squash and Crispy Sage Pizza">Butternut Squash and Crispy Sage Pizza</option>
+              <option value="Macaroni And Cheese Pizza">Macaroni And Cheese Pizza</option>
+              <option value="Berry, Arugula and Prosciutto Pizza">Berry, Arugula and Prosciutto Pizza</option>
+          </select>
             <label for="crust">Crust</label><br>
-             <!-- <select id="select3">
-                <option value="zero"></option>
-              <option value="1">Thin</option>
-              <option value="2">Thick</option>
-              <option value="3">custom</option>
-              <option value="4">Focaccia</option>
-              <option value="5">Flatbread</option>
-          </select> -->
-            <input type="text" id="third">
+             <select id="select3">
+                <option value="none">none</option>
+              <option value="Thin">Thin</option>
+              <option value="Thick">Thick</option>
+              <option value="custom">custom</option>
+              <option value="Focaccia">Focaccia</option>
+              <option value="Flatbread">Flatbread</option>
+          </select>
             <label for="top">Toppings</label><br>
-             <!-- <select id="select4">
-                <option value="zero"></option>
-              <option value="1">Gorgonzola, artichoke hearts, prosciutto, red onion, and tomato</option>
-              <option value="2">Buffalo chicken and blue cheese</option>
-              <option value="3">Roasted Brussels sprouts and bacon or pancetta</option>
-              <option value="4">Figs, prosciutto, and caramelized onions</option>
-              <option value="5">Sausage and pineapple</option>
-          </select> -->
-            <input type="text" id="fourth">
+             <select id="select4">
+                <option value="none">none</option>
+              <option value="Gorgonzola, artichoke hearts, prosciutto, red onion, and tomato">Gorgonzola, artichoke hearts, prosciutto, red onion, and tomato</option>
+              <option value="Buffalo chicken and blue cheese">Buffalo chicken and blue cheese</option>
+              <option value="Roasted Brussels sprouts and bacon or pancetta">Roasted Brussels sprouts and bacon or pancetta</option>
+              <option value="Figs, prosciutto, and caramelized onions">Figs, prosciutto, and caramelized onions</option>
+              <option value="Sausage and pineapple">Sausage and pineapple</option>
+          </select>
             </div>
             <button id="another">Another pizza</button>
             <input type="submit" value="Order" id="submit" style="background-color:green; width: 20%;
